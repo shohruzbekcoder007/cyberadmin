@@ -1,31 +1,21 @@
 import React from "react";
 import { useContext } from "react";
-import { ColorModeContext, tokens } from "../../theme";
-import { useTheme, Box, IconButton, InputBase } from "@mui/material";
+import { ColorModeContext } from "../theme";
+import { useTheme, Box, IconButton, Paper } from "@mui/material";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
-import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
-// import SearchIcon from "@mui/icons-material/Search";
-import { useProSidebar } from "react-pro-sidebar";
-const Topbar = () => {
+
+const UserTopbar = () => {
   const theme = useTheme();
   const colorMode = useContext(ColorModeContext);
-  const { toggleSidebar, broken, rtl } = useProSidebar();
 
   return (
+    <Paper sx={{bgcolor: "background", borderRadius: 0, boxShadow: "none", borderColor: "divider"}}>
     <Box display="flex" justifyContent="space-between" p={2}>
       <Box display="flex">
-        {broken && !rtl && (
-          <IconButton
-            sx={{ margin: "0 6 0 2" }}
-            onClick={() => toggleSidebar()}
-          >
-            <MenuOutlinedIcon />
-          </IconButton>
-        )}
+        Al Fajir
       </Box>
       <Box display="flex">
         <IconButton onClick={colorMode.toggleColorMode}>
@@ -40,22 +30,12 @@ const Topbar = () => {
           <NotificationsOutlinedIcon />
         </IconButton>
         <IconButton>
-          <SettingsOutlinedIcon />
-        </IconButton>
-        <IconButton>
           <PersonOutlinedIcon />
         </IconButton>
-        {broken && rtl && (
-          <IconButton
-            sx={{ margin: "0 6 0 2" }}
-            onClick={() => toggleSidebar()}
-          >
-            <MenuOutlinedIcon />
-          </IconButton>
-        )}
       </Box>
     </Box>
+    </Paper>
   );
 };
 
-export default Topbar;
+export default UserTopbar;
