@@ -61,43 +61,17 @@ export default function User() {
             indicatorColor="secondary"
             sx={{ borderRight: 1, borderColor: "divider", width: "200px"}}
         >
-            <Tab label="Item One" {...a11yProps(0)}/>
-            <Tab label="Item Two" {...a11yProps(1)}/>
-            <Tab label="Item Three" {...a11yProps(2)}/>
-            <Tab label="Item Four" {...a11yProps(3)}/>
+            <Tab label="Mening Kompaniyam" {...a11yProps(0)}/>
+            <Tab label="Arizalar" {...a11yProps(1)}/>
+            <Tab label="Hisobot" {...a11yProps(2)}/>
         </Tabs>
         <TabPanel value={value} index={0}>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
+            <Typography variant="h4" gutterBottom>
+              O'zbekiston Respublikasi Prezidenti huzuridagi statistika agentligi
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+              O‘zbekiston Respublikasi Davlat statistika qo‘mitasi O‘zbekiston Respublikasi Prezidentining 2022- yil 21- dekabrdagi “Yangi O‘zbekiston ma’muriy islohotlarini amalga oshirish chora-tadbirlari to‘g‘risida” PF- 269- son Farmoniga muvofiq Statistika agentligi shaklida O‘zbekiston Respublikasi Prezidenti huzuriga o'tkazilgan
+            </Typography>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>
         </TabPanel>
@@ -105,9 +79,6 @@ export default function User() {
             Item Two
         </TabPanel>
         <TabPanel value={value} index={2}>
-            Item Three
-        </TabPanel>
-        <TabPanel value={value} index={3}>
             Item Three
         </TabPanel>
         </Box>
