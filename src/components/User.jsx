@@ -1,11 +1,11 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import { Container, Paper } from "@mui/material";
-import UserTopbar from "./UserTopbar";
+import * as React from "react"
+import PropTypes from "prop-types"
+import Tabs from "@mui/material/Tabs"
+import Tab from "@mui/material/Tab"
+import Typography from "@mui/material/Typography"
+import Box from "@mui/material/Box"
+import { Container, Paper } from "@mui/material"
+import UserTopbar from "./UserTopbar"
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -50,20 +50,21 @@ export default function User() {
   return (
     <Container maxWidth="lg">
         <UserTopbar/>
-        <Paper>
-        <Box sx={{ flexGrow: 1, bgcolor: "background.paper", display: "flex", minHeight: "100vh" }}>
+        <Paper sx={{bgcolor: "usertop.main", borderRadius: 0, boxShadow: "none", borderTop: '1px solid rgba(0, 0, 0, 0.12)'}}>
+        <Box sx={{ flexGrow: 1, display: "flex", minHeight: "100vh" }}>
         <Tabs
             orientation="vertical"
             variant="scrollable"
             value={value}
             onChange={handleChange}
             aria-label="Vertical tabs example"
+            indicatorColor="secondary"
             sx={{ borderRight: 1, borderColor: "divider", width: "200px"}}
         >
-            <Tab label="Item One" {...a11yProps(0)} />
-            <Tab label="Item Two" {...a11yProps(1)} />
-            <Tab label="Item Three" {...a11yProps(2)} />
-            <Tab label="Item Four" {...a11yProps(3)} />
+            <Tab label="Item One" {...a11yProps(0)}/>
+            <Tab label="Item Two" {...a11yProps(1)}/>
+            <Tab label="Item Three" {...a11yProps(2)}/>
+            <Tab label="Item Four" {...a11yProps(3)}/>
         </Tabs>
         <TabPanel value={value} index={0}>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facilis nam unde ad ducimus provident enim ratione id adipisci sit. Magnam totam eveniet quasi minus. Optio maxime mollitia aliquid aperiam.</p>

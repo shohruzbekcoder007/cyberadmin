@@ -144,6 +144,12 @@ export const themeSettings = (mode) => {
             background: {
               default: colors.primary[500],
               // paper: colors.greenAccent[400]
+            },
+            usertop: {
+              main: '#74747461'
+            },
+            tabscolor: {
+              main: '#48b5a9'
             }
           }
         : {
@@ -161,7 +167,13 @@ export const themeSettings = (mode) => {
             },
             background: {
               default: "#fcfcfc",
-              paper: colors.greenAccent[400]
+              // paper: colors.greenAccent[400]
+            },
+            usertop: {
+              main: '#fff'
+            },
+            tabscolor: {
+              main: '#48b5a9'
             }
           })
     },

@@ -12,10 +12,10 @@ const UserTopbar = () => {
   const colorMode = useContext(ColorModeContext);
 
   return (
-    <Paper sx={{bgcolor: "background", borderRadius: 0, boxShadow: "none", borderColor: "divider"}}>
+    <Paper sx={{bgcolor: "usertop.main", borderRadius: 0,  borderColor: "divider", boxShadow: "none"}}>
     <Box display="flex" justifyContent="space-between" p={2}>
       <Box display="flex">
-        Al Fajir
+        <img src={require('../media/logo2.png')} alt="logo"/>
       </Box>
       <Box display="flex">
         <IconButton onClick={colorMode.toggleColorMode}>
