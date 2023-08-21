@@ -2,8 +2,8 @@ import React from "react";
 import { useContext } from "react";
 import { ColorModeContext } from "../theme";
 import { useTheme, Box, IconButton, Paper } from "@mui/material";
-// import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
-// import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
+import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
+import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import CustomizedChangeLanguage from "./CustomizedChangeLanguage";
@@ -21,12 +21,12 @@ const UserTopbar = () => {
       <Box display="flex">
       <CustomizedChangeLanguage/>
         <IconButton onClick={colorMode.toggleColorMode}>
-          {/* {theme.palette.mode === "dark" ? (
+          {theme.palette.mode === "dark" ? (
             
            <LightModeOutlinedIcon />
           ) : (
             <DarkModeOutlinedIcon />
-          )} */}
+          )}
         </IconButton>
         <IconButton>
           <NotificationsOutlinedIcon />

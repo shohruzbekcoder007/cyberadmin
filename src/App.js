@@ -17,6 +17,9 @@ import FAQ from "./pages/faq";
 import Geography from "./pages/geography";
 import Admin from "./components/Admin";
 import User from "./components/User";
+import Company from "./components/Company";
+import Applications from "./components/Applications";
+import Report from "./components/Report";
 
 const App = () => {
   const [theme, colorMode] = useMode();
@@ -25,7 +28,11 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <CssBaseline />
               <Routes>
-                <Route path="/" element={<User/>}/>
+                <Route path="/" element={<User/>}>
+                  <Route index element={<Company />} />
+                  <Route path="applications" element={<Applications />} />
+                  <Route path="report" element={<Report />} />
+                </Route>
                 <Route path="admin" element={<Admin />}>
                   <Route index element={<Dashboard />} />
                   <Route path="team" element={<Team />} />

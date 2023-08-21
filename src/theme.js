@@ -166,7 +166,7 @@ export const themeSettings = (mode) => {
               light: colors.grey[100]
             },
             background: {
-              default: "#fcfcfc",
+              default: "#dcdcdc",
               // paper: colors.greenAccent[400]
             },
             usertop: {
