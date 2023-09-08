@@ -21,6 +21,7 @@ import Company from "./components/Company";
 import Applications from "./components/Applications";
 import Report from "./components/Report";
 import Example from "./components/Example";
+import Login from "./components/Login";
 
 const App = () => {
   const [theme, colorMode] = useMode();
@@ -47,7 +48,7 @@ const App = () => {
                   <Route path="calendar" element={<Calendar />} />
                   <Route path="geography" element={<Geography />} />
                 </Route>
-                <Route path="user-login" element={<Example/>} />
+                <Route path="user-login" element={<Login/>} />
               </Routes>
       </ThemeProvider>
     </ColorModeContext.Provider>

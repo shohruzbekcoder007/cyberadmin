@@ -15,6 +15,7 @@ const Example = () => {
     eimzoService.startApi();
     eimzoService.getAllCertificates().then((res) => {
       setKeys(res);
+      console.log(res[0].parsedAlias, res[0].inn, "<--")
       setselectedKey(res[0]?.serialNumber);
     });
   }, []);
@@ -50,14 +51,6 @@ const Example = () => {
           <textarea style={{height: "500px"}} value={result}>{result}</textarea>
         </div>
       )}
-
-      {/* <ul className="dropdown-menu keysDropdownMenu" aria-labelledby="leDropdownMenu1">
-        <li><a href="#" onClick="uiComboSelect('itm-77957EB8-0')"><img src="/src/assets/pfx.ico" alt="#"/> <b>SERTIFIKAT
-          №:</b> 77957eb8<br/><b>STIR:</b> 490183397 <b>JISMONIY SHAXS</b><br/><b>F.I.Sh.:</b>AZIMOV BOBUR BAXRAMDJONOVICH<br/><font
-          size="-2"><b>Sertifikatni amal qilish muddati:</b> 20.08.2021 - 20.08.2023</font>
-          </a>
-        </li>
-      </ul> */}
     </div>
   );
 }
