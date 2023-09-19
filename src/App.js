@@ -22,6 +22,7 @@ import Applications from "./components/Applications";
 import Report from "./components/Report";
 import Example from "./components/Example";
 import Login from "./components/Login";
+import SignInSide from "./components/SignInSide";
 
 const App = () => {
   const [theme, colorMode] = useMode();
@@ -29,7 +30,7 @@ const App = () => {
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-              <Routes>
+              {/* <Routes>
                 <Route path="/" element={<User/>}>
                   <Route index element={<Company />} />
                   <Route path="applications" element={<Applications />} />
@@ -49,7 +50,8 @@ const App = () => {
                   <Route path="geography" element={<Geography />} />
                 </Route>
                 <Route path="user-login" element={<Login/>} />
-              </Routes>
+              </Routes> */}
+              <SignInSide/>
       </ThemeProvider>
     </ColorModeContext.Provider>
   );
