@@ -8,13 +8,15 @@ import Grid from '@mui/material/Grid';
 import { LoaderWrapper, LoginLogo } from './styles';
 import { CircularProgress, Snackbar, Typography } from '@mui/material';
 import MuiAlert from '@mui/material/Alert';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 // import { useDispatch } from 'react-redux';
 // import { token_url, user_me } from '../../utils/API_urls'
 // import { getRole, getToken } from './requests'
 // import { setUser } from '../../redux/action/userActions'
 // import { getRole as getRoleUser } from '../../utils/getRole'
 import login_pahe_img from '../../media/about-page.2f3ea62c.png' 
+import { admin_me, user_signin } from '../../utils/API_urls';
+import { getRole, getToken } from './requests';
 
 const LoadingPage = () => {
     return (
@@ -30,7 +32,7 @@ const LoadingPage = () => {
 
 export default function SignInSide() {
 
-  let navigate = useNavigate()
+  // let navigate = useNavigate()
   const [pageLoading, setPageLoading] = useState(false)
   const [openAlert, setOpenAlert] = useState(false)
   const [haveatoken, setHaveatoken] = useState(false)
@@ -44,9 +46,10 @@ export default function SignInSide() {
   };
 
   const successfulFunctionGetToken = (response) => {
-    sessionStorage.setItem('access_token', response.data.access)
+    console.log(response, response.data.token)
+    sessionStorage.setItem('x-access-token', response.data.token)
     setHaveatoken(true)
-    // getRole(user_me, successfulFunctionGetRole, errorFunctionGetRole)
+    getRole(admin_me, successfulFunctionGetRole, errorFunctionGetRole)
   }
 
   const errorFunctionGetToken = (error) => {
@@ -57,6 +60,7 @@ export default function SignInSide() {
   }
 
   const successfulFunctionGetRole = (response) => {
+    console.log(response)
     // dispatch(setUser(response.data))
     // const user_role = getRoleUser(response.data)
     // setPageLoading(false)
@@ -80,11 +84,11 @@ export default function SignInSide() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    // getToken(token_url, {
-    //   username: data.get('username'),
-    //   password: data.get('password'),
-    // }, successfulFunctionGetToken, errorFunctionGetToken)
-    // setPageLoading(true)
+    getToken(user_signin, {
+      email: data.get('username'),
+      password: data.get('password'),
+    }, successfulFunctionGetToken, errorFunctionGetToken)
+    setPageLoading(true)
   }
 
   return (
