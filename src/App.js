@@ -36,7 +36,7 @@ const App = () => {
           <UserProvider >
             <Routes>
               {
-                sessionStorage.getItem("access_token") ? (
+                // sessionStorage.getItem("access_token") ? (
                   <Route path="/" element={<MainComponent/>}>
                     <Route path="admin" element={<Admin />}>
                       <Route index element={<Dashboard />} />
@@ -55,12 +55,12 @@ const App = () => {
                       {/* yana routerlar buladi */}
                     </Route>
                   </Route>
-                ):
-                <></>
+                // ):
+                // <></>
               }
               <Route path="login" element={<SignInSide/>} />
               <Route path="admin-login" element={<p>admin login</p>} />
-              <Route path="*" element={<Navigate to={sessionStorage.getItem("access_token") ? "/" : "login"} />} />
+              {/* <Route path="*" element={<Navigate to={sessionStorage.getItem("access_token") ? "/" : "login"} />} /> */}
             </Routes>
           </UserProvider>
       </ThemeProvider>

@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './styles.css'
-import { user_signin } from '../../utils/API_urls'
-import axios from '../../utils/baseUrl'
+import { company_signin, user_signin } from '../../utils/API_urls'
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
 import Snackbar from '@mui/material/Snackbar';
+import { postRequest } from '../../utils/resquests';
+import { UserContext } from '../../context/UserContext';
+import { useNavigate } from 'react-router-dom';
 
 export default function SignInSide() {
 
@@ -13,6 +15,10 @@ export default function SignInSide() {
     const [password, setPassword] = useState('')
     const [error, setError] = useState(false)
     const [loading, setLoading] = useState(false)
+    
+    const { user, setUser } = useContext(UserContext)
+
+    const navigate = useNavigate()
 
     const handleOpenDropDown = (_) => {
         setOpenLanguages(prev => !prev)
@@ -34,11 +40,15 @@ export default function SignInSide() {
 
     const handleSubmit = () => {
         handleOpenBackdrop()
-        axios.post(user_signin, {
-            username,
-            password,
+        postRequest(company_signin, {
+            pinfl: username,
+            password: password,
         }).then(response => {
-            console.log(response)
+            if(response.data.token){
+                sessionStorage.setItem('x-access-token', response.data.token)
+                setUser(response.data.data)
+                navigate("/user");
+            }
             handleCloseBackdrop()
         }).catch(error => {
             console.log(error)
