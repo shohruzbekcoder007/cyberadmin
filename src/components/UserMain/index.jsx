@@ -1,11 +1,15 @@
 import React from 'react'
 import { useContext } from 'react'
 import { UserContext } from '../../context/UserContext'
+import UserWrapper from '../UserWrapper'
 
 export default function UserMain() {
   const { user } = useContext(UserContext)
   
   return (
-    <div>UserMain {user?.organization_name}</div>
+    <div>
+      {/* {user?.organization_name} */}
+      <UserWrapper/>
+    </div>
   )
 }

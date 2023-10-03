@@ -26,6 +26,8 @@ import SignInSide from "./components/SignInSide";
 import MainComponent from "./components/MainComponent";
 import UserMain from "./components/UserMain";
 import UserProvider from "./context/UserContext";
+import MyCompany from "./components/MyCompany";
+import Application from "./components/Application";
 
 const App = () => {
   const [theme, colorMode] = useMode();
@@ -52,7 +54,11 @@ const App = () => {
                       <Route path="geography" element={<Geography />} />
                     </Route>
                     <Route path="user" element={<UserMain/>}>
-                      {/* yana routerlar buladi */}
+                      <Route index element={<MyCompany />} />
+                      {/* company */} 
+                      <Route path="company" element={<MyCompany />} />
+                      <Route path="reports" element={<MyCompany />} />
+                      <Route path="application" element={<Application />} />
                     </Route>
                   </Route>
                 // ):
