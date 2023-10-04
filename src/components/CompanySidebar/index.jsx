@@ -44,9 +44,33 @@ export default function CompanySidebar() {
                     </NavLink>
                     <div className="collapse" id="auth">
                             <ul className="nav flex-column sub-menu">
-                                <li className="nav-item"> <a className="nav-link" href="./quarter.html"> Choraklik hisobot </a></li>
-                                <li className="nav-item"> <a className="nav-link" href="./auditor.html"> Auditorlik xulosasi </a></li>
-                                <li className="nav-item"> <a className="nav-link" href="./monthly.html"> Oylik daromad </a></li>
+                                <li className="nav-item"> 
+                                    <NavLink
+                                        to="reports/quarterly"
+                                        className={({ isActive }) =>
+                                        isActive ? "nav-link active" : "nav-link"}
+                                    >
+                                        Choraklik hisobot
+                                    </NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink
+                                        to="reports/auditing"
+                                        className={({ isActive }) =>
+                                        isActive ? "nav-link active" : "nav-link"}
+                                    >
+                                        Auditorlik xulosasi
+                                    </NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink
+                                        to="reports/monthly"
+                                        className={({ isActive }) =>
+                                        isActive ? "nav-link active" : "nav-link"}
+                                    >
+                                        Oylik daromad
+                                    </NavLink>
+                                </li>
                             </ul>
                         </div>
                 </div>

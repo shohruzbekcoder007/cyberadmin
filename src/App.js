@@ -28,6 +28,10 @@ import UserMain from "./components/UserMain";
 import UserProvider from "./context/UserContext";
 import MyCompany from "./components/MyCompany";
 import Application from "./components/Application";
+import Reports from "./components/Reports";
+import QuarterlyReport from "./components/QuarterlyReport";
+import Auditing from "./components/Auditing";
+import MonthlyReport from "./components/MonthlyReport";
 
 const App = () => {
   const [theme, colorMode] = useMode();
@@ -55,10 +59,15 @@ const App = () => {
                     </Route>
                     <Route path="user" element={<UserMain/>}>
                       <Route index element={<MyCompany />} />
-                      {/* company */} 
                       <Route path="company" element={<MyCompany />} />
-                      <Route path="reports" element={<MyCompany />} />
                       <Route path="application" element={<Application />} />
+                      <Route path="reports" element={<Reports />} >
+                        <Route path="quarterly" element={<QuarterlyReport />} />
+                        <Route path="auditing" element={<Auditing />} />
+                        <Route path="monthly" element={<MonthlyReport />} />
+                        {/* MonthlyReport */}
+                        {/* Auditing */}
+                      </Route>
                     </Route>
                   </Route>
                 // ):
