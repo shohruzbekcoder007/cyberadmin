@@ -58,23 +58,22 @@ const App = () => {
                       <Route path="geography" element={<Geography />} />
                     </Route>
                     <Route path="user" element={<UserMain/>}>
-                      <Route index element={<MyCompany />} />
+                      <Route index element={<Navigate to="company" replace={true} />} />
                       <Route path="company" element={<MyCompany />} />
                       <Route path="application" element={<Application />} />
                       <Route path="reports" element={<Reports />} >
+                        <Route index element={<Navigate to="quarterly" replace={true} />} />
                         <Route path="quarterly" element={<QuarterlyReport />} />
                         <Route path="auditing" element={<Auditing />} />
                         <Route path="monthly" element={<MonthlyReport />} />
-                        {/* MonthlyReport */}
-                        {/* Auditing */}
                       </Route>
                     </Route>
                   </Route>
                 // ):
                 // <></>
               }
-              <Route path="login" element={<SignInSide/>} />
-              <Route path="admin-login" element={<p>admin login</p>} />
+              <Route path="login" element={<SignInSide admin={false}/>} />
+              <Route path="admin-login" element={<SignInSide admin={true}/>} />
               {/* <Route path="*" element={<Navigate to={sessionStorage.getItem("access_token") ? "/" : "login"} />} /> */}
             </Routes>
           </UserProvider>

@@ -8,7 +8,7 @@ import { postRequest } from '../../utils/resquests';
 import { UserContext } from '../../context/UserContext';
 import { useNavigate } from 'react-router-dom';
 
-export default function SignInSide() {
+export default function SignInSide({admin}) {
 
     const [openLanguages, setOpenLanguages] = useState(false)
     const [username, setUsername] = useState('')
@@ -57,6 +57,14 @@ export default function SignInSide() {
         })
     }
 
+    const gotoAdmin = () => {
+        navigate("/admin-login")
+    }
+
+    const gotoUser = () => {
+        navigate("/login")
+    }
+
     return (
         <div className="d-lg-flex half" onClick={closeOpenDropDown}>
             <div className="bg">
@@ -72,10 +80,22 @@ export default function SignInSide() {
             <div className="contents">
                 <div className="container">
                     <div className="right-top col-md-12">
-                        <button>
-                            <i className="fas fa-user-circle"></i>
-                            <span>Adminlar uchun</span>
-                        </button>
+                        {
+                            (!admin)?
+                                <button
+                                    onClick={gotoAdmin}
+                                >
+                                    <i className="fas fa-user-circle"></i>
+                                    <span>Adminlar uchun</span>
+                                </button>
+                            :
+                                <button
+                                    onClick={gotoUser}
+                                >
+                                    <i className="fas fa-user-circle"></i>
+                                    <span>Userlar uchun</span>
+                                </button>
+                        }
                         <div className="dropdown">
                             <button onClick={handleOpenDropDown} className="dropbtn">Uz</button>
                             <div id="myDropdown" className={`dropdown-content ${openLanguages ? "show" : ""}`}>
