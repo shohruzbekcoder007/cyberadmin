@@ -44,6 +44,10 @@ export default function SignInSide({admin}) {
             pinfl: username,
             password: password,
         }).then(response => {
+            if(response.data.message=="user does not exist and not verified"){
+                handleCloseBackdrop()
+                setError(true)
+            }
             if(response.data.token){
                 sessionStorage.setItem('x-access-token', response.data.token)
                 setUser(response.data.data)
